@@ -64,7 +64,7 @@ lr_range_test_args = dict(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
     overwrite_output_dir=True,

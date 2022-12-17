@@ -93,7 +93,7 @@ lr_range_test_args = dict(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,
@@ -148,7 +148,7 @@ bert_100k.update(
 # Suggested max_lr=0.00084
 bert_lr_range_test = deepcopy(bert_100k)
 bert_lr_range_test.update(
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
     **lr_range_test_args
 )
 
@@ -158,7 +158,7 @@ bert_lr_range_test.update(
 # Suggested max_lr=0.00079
 bert_fp16_lr_range_test = deepcopy(bert_100k)
 bert_fp16_lr_range_test.update(
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
     **lr_range_test_args
 )
 
@@ -168,8 +168,8 @@ bert_fp16_lr_range_test.update(
 # It takes 7h with the final eval_loss of 2.225.
 bert_100k_deepspeed_bsz_2k = deepcopy(bert_100k)
 bert_100k_deepspeed_bsz_2k.update(
-    # tokenized_data_cache_dir="/mnt/efs/results/preprocessed-datasets/text",
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    # tokenized_data_cache_dir="/home/ytang/nupic.research/results/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
 
     # Training Arguments
     gradient_accumulation_steps=2,

@@ -106,7 +106,7 @@ class ModelArguments:
         }
     )
     cache_dir: Optional[str] = field(
-        default="/mnt/efs/results/pretrained-models/huggingface",
+        default="/home/ytang/nupic.research/results/pretrained-models/huggingface",
         metadata={
             "help": "Where do you want to store the pretrained models downloaded "
                     "from huggingface.co"},
@@ -208,7 +208,7 @@ class DataTrainingArguments:
     """
 
     tokenized_data_cache_dir: str = field(
-        default="/mnt/efs/results/preprocessed-datasets/text",
+        default="/home/ytang/nupic.research/results/preprocessed-datasets/text",
         metadata={"help": "Directory to save tokenized datasets."}
     )
     reuse_tokenized_data: bool = field(

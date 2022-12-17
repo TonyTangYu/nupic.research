@@ -208,7 +208,7 @@ small_bert_large_dataset_100k.update(
     max_seq_length=128,
     dataset_name=("wikipedia", "bookcorpus"),
     dataset_config_name=("20200501.en", None),
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",  # noqa: E501
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",  # noqa: E501
     # added in 8/7 to fix discrepancies between dense and sparse
     per_device_train_batch_size=16,
     per_device_eval_batch_size=16

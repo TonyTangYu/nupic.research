@@ -51,7 +51,7 @@ if __name__ == "__main__":
     parser.add_argument("checkpoint_folder", type=str,
                         help="Path to checkpoint to convert")
     parser.add_argument("--destination_folder", type=str,
-                        default="/mnt/efs/results/pretrained-models/transformers-local",
+                        default="/home/ytang/nupic.research/results/pretrained-models/transformers-local",
                         help="Where to save the converted model")
     parser.add_argument("--model_name", type=str,
                         default=None,

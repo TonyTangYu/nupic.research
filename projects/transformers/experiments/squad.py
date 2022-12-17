@@ -110,7 +110,7 @@ debug_squad_v2_beam.update(
 
 bert_100k_squad = deepcopy(bert_squad_replication)
 bert_100k_squad.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_100k"
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k"
 )
 
 

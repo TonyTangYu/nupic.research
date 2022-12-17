@@ -73,7 +73,7 @@ lr_range_test_args = dict(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
     overwrite_output_dir=True,
@@ -114,7 +114,7 @@ tiny_bert_trifecta_300k.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
 
         # RigL
@@ -134,7 +134,7 @@ finetuning_tiny_bert_trifecta_100k = deepcopy(finetuning_bert700k_glue)
 finetuning_tiny_bert_trifecta_100k.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/tiny_bert_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/tiny_bert_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         RezeroWeightsCallback(),
         TrackEvalMetrics(),
@@ -157,7 +157,7 @@ tiny_bert_trifecta_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
     overwrite_output_dir=True,
@@ -174,7 +174,7 @@ small_bert_dataset_args = dict(
     max_seq_length=128,
     dataset_name=("wikipedia", "bookcorpus"),
     dataset_config_name=("20200501.en", None),
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",  # noqa: E501
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",  # noqa: E501
 )
 
 
@@ -212,7 +212,7 @@ small_bert_trifecta_300k.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
 
         # RigL
@@ -362,7 +362,7 @@ finetuning_small_bert_trifecta_100k_glue = deepcopy(
 finetuning_small_bert_trifecta_100k_glue.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         TrackEvalMetrics(),
         RezeroWeightsCallback()],
@@ -377,28 +377,28 @@ finetuning_small_bert_sparse_85_trifecta_100k_glue = deepcopy(
     finetuning_small_bert_trifecta_100k_glue)
 finetuning_small_bert_sparse_85_trifecta_100k_glue.update(
     # Model arguments
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
 )
 
 
 finetuning_small_bert_sparse_90_trifecta_100k_glue = deepcopy(
     finetuning_small_bert_trifecta_100k_glue)
 finetuning_small_bert_sparse_90_trifecta_100k_glue.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k"  # noqa: E501
 )
 
 
 finetuning_small_bert_sparse_2x_trifecta_100k_glue = deepcopy(
     finetuning_small_bert_trifecta_100k_glue)
 finetuning_small_bert_sparse_2x_trifecta_100k_glue.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k"  # noqa: E501
 )
 
 
 finetuning_small_bert_sparse_4x_trifecta_100k_glue = deepcopy(
     finetuning_small_bert_trifecta_100k_glue)
 finetuning_small_bert_sparse_4x_trifecta_100k_glue.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k"  # noqa: E501
 )
 
 # ---------
@@ -410,7 +410,7 @@ finetuning_small_bert_sparse_4x_trifecta_100k_glue.update(
 debug_squad_trifecta_v1_no_beam = deepcopy(debug_squad_v1_no_beam)
 debug_squad_trifecta_v1_no_beam.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         TrackEvalMetrics(),
         RezeroWeightsCallback()],
@@ -424,7 +424,7 @@ debug_squad_trifecta_v1_beam.update(
 debug_squad_trifecta_v2_no_beam = deepcopy(debug_squad_v2_no_beam)
 debug_squad_trifecta_v2_no_beam.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         TrackEvalMetrics(),
         RezeroWeightsCallback()],
@@ -438,7 +438,7 @@ debug_squad_trifecta_v2_beam.update(
 
 squad_trifecta_100k = deepcopy(bert_100k_squad)
 squad_trifecta_100k.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         RezeroWeightsCallback(),
         TrackEvalMetrics()]
@@ -446,17 +446,17 @@ squad_trifecta_100k.update(
 
 squad_trifecta_85_100k = deepcopy(bert_100k_squad)
 squad_trifecta_85_100k.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_85%_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_85%_trifecta_100k"  # noqa: E501
 )
 
 squad_trifecta_90_100k = deepcopy(bert_100k_squad)
 squad_trifecta_90_100k.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa: E501
 )
 
 squad_trifecta_2x_100k = deepcopy(bert_100k_squad)
 squad_trifecta_2x_100k.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa: E501
 )
 
 # BERT Base with KD + RigL + OneCycle LR
@@ -481,7 +481,7 @@ bert_sparse_trifecta_100k.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
 
         # RigL
@@ -519,7 +519,7 @@ verify_bert_sparse_trifecta_100k.update(
     do_eval=True,
     overwrite_output_dir=False,
     save_tokenized_data=False,
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",  # noqa: E501
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",  # noqa: E501
 )
 
 # ---------
@@ -532,7 +532,7 @@ finetuning_bert_sparse_trifecta_100k_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_bert_sparse_trifecta_100k_glue.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         RezeroWeightsCallback(),
         TrackEvalMetrics(),
@@ -546,7 +546,7 @@ finetuning_bert_sparse_trifecta_100k_glue_get_info = deepcopy(
     finetuning_bert_100k_glue_get_info)
 finetuning_bert_sparse_trifecta_100k_glue_get_info.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         RezeroWeightsCallback(),
         TrackEvalMetrics()],
@@ -562,14 +562,14 @@ finetuning_bert_sparse_trifecta_100k_glue_get_info["task_hyperparams"]["mnli"].u
 finetuning_bert_sparse_85_trifecta_100k_glue_get_info = deepcopy(
     finetuning_bert_sparse_trifecta_100k_glue_get_info)
 finetuning_bert_sparse_85_trifecta_100k_glue_get_info.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_85%_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_85%_trifecta_100k"  # noqa: E501
 )
 
 # As above, but 90% sparse
 finetuning_bert_sparse_90_trifecta_100k_glue_get_info = deepcopy(
     finetuning_bert_sparse_trifecta_100k_glue_get_info)
 finetuning_bert_sparse_90_trifecta_100k_glue_get_info.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa: E501
 )
 
 # As above, trifecta_2x
@@ -577,7 +577,7 @@ finetuning_bert_sparse_trifecta_2x_get_info = deepcopy(
     finetuning_bert_sparse_trifecta_100k_glue_get_info)
 finetuning_bert_sparse_trifecta_2x_get_info.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa: E501
 )
 
 # BERT Base 2x Wide
@@ -585,7 +585,7 @@ finetuning_bert_sparse_trifecta_2x_get_info.update(
 # size of 256. GPU memory ~26 GB. Time to completion is roughly 35 hrs.
 bert_sparse_trifecta_2x_100k = deepcopy(bert_sparse_trifecta_100k)
 bert_sparse_trifecta_2x_100k.update(
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
     overwrite_output_dir=False,
@@ -620,7 +620,7 @@ bert_sparse_2x_100k_kd_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,
@@ -639,7 +639,7 @@ bert_sparse_trifecta_4x_100k = deepcopy(bert_sparse_trifecta_100k)
 bert_sparse_trifecta_4x_100k.update(
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
 
     # We'll skip eval in this config as it takes a lot more GPU memory.
     do_eval=False,
@@ -664,7 +664,7 @@ bert_sparse_trifecta_4x_100k["config_kwargs"].update(
 # This is ran on four p4d.24xlarge instances for an effective batch size of 256
 bert_sparse_4x_100k_kd_lr_range_test = deepcopy(fully_static_sparse_bert_100k_fp16)
 bert_sparse_4x_100k_kd_lr_range_test.update(
-    tokenized_data_cache_dir="/mnt/datasets/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
     per_device_train_batch_size=2,
     per_device_eval_batch_size=2,
     gradient_accumulation_steps=4,
@@ -679,7 +679,7 @@ bert_sparse_4x_100k_kd_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,

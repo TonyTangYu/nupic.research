@@ -63,7 +63,7 @@ rigl_args = dict(
 
 kd_args = dict(
     teacher_model_names_or_paths=[
-        "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi",
+        "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
     ],
 )
 
@@ -159,7 +159,7 @@ tiny_bert_kd_onecycle_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,
@@ -287,7 +287,7 @@ bert_sparse_100k_kd_oncycle_lr.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,
@@ -309,7 +309,7 @@ bert_sparse_100k_kd_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/mnt/efs/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
     ),
     overwrite_output_dir=True,
@@ -322,7 +322,7 @@ finetuning_bert_sparse_kd_oncycle_lr_100k_glue = deepcopy(finetuning_bert700k_gl
 finetuning_bert_sparse_kd_oncycle_lr_100k_glue.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_kd_onecycle_lr_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_kd_onecycle_lr_100k",  # noqa: E501
 )
 
 

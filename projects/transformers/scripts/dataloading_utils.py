@@ -41,7 +41,7 @@ def get_dataset_wkbc():
         max_seq_length=128,
         dataset_name=("wikipedia_plus_bookcorpus",),
         dataset_config_name=(None,),
-        tokenized_data_cache_dir="/mnt/efs/results/preprocessed-datasets/text",
+        tokenized_data_cache_dir="/home/ytang/nupic.research/results/preprocessed-datasets/text",
         pad_to_max_length=False,
         data_collator="DataCollatorForWholeWordMask",
         mlm_probability=0.15,
@@ -58,7 +58,7 @@ def get_dataset_wkbc():
     # load tokenizer
     tokenizer_kwargs = dict(
         revision="main",
-        cache_dir="/mnt/efs/results/pretrained-models/huggingface",
+        cache_dir="/home/ytang/nupic.research/results/pretrained-models/huggingface",
         use_fast=True,
         use_auth_token=False,
     )

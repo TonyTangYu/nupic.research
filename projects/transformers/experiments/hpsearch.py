@@ -88,7 +88,7 @@ debug_hp_search.update(
 
 debug_finetuning_hp_search = deepcopy(finetuning_bert100k_glue)
 debug_finetuning_hp_search.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
     task_name=None,
     task_names=["cola", "rte"],
     num_runs=1,
@@ -167,7 +167,7 @@ debug_finetuning_sparse_hp_mnli.update(
 hp_search_finetuning_small_bert_100k_small_tasks = deepcopy(
     debug_finetuning_hp_search)
 hp_search_finetuning_small_bert_100k_small_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
     task_name=None,
     task_names=["cola", "mrpc", "rte", "stsb", "wnli"],
     hp_space=lambda trial: dict(
@@ -201,7 +201,7 @@ hp_search_finetuning_small_bert_trifecta_100k_small_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_small_tasks)
 hp_search_finetuning_small_bert_trifecta_100k_small_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
 )
 
 
@@ -209,7 +209,7 @@ hp_search_finetuning_small_bert_trifecta_85_100k_small_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_small_tasks)
 hp_search_finetuning_small_bert_trifecta_85_100k_small_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
 )
 
 
@@ -217,21 +217,21 @@ hp_search_finetuning_small_bert_trifecta_90_100k_small_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_small_tasks)
 hp_search_finetuning_small_bert_trifecta_90_100k_small_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_2x_100k_small_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_small_tasks)
 hp_search_finetuning_small_bert_trifecta_2x_100k_small_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_4x_100k_small_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_small_tasks)
 hp_search_finetuning_small_bert_trifecta_4x_100k_small_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
 )
 
 # ---------
@@ -241,7 +241,7 @@ hp_search_finetuning_small_bert_trifecta_4x_100k_small_tasks.update(
 hp_search_finetuning_small_bert_100k_big_tasks = deepcopy(
     debug_finetuning_hp_search)
 hp_search_finetuning_small_bert_100k_big_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
     task_name=None,
     task_names=["mnli", "qnli", "qqp", "sst2"],
     eval_steps=2_000,
@@ -298,7 +298,7 @@ hp_search_finetuning_small_bert_trifecta_100k_qqp = deepcopy(
 hp_search_finetuning_small_bert_trifecta_100k_qqp.update(
     task_names=["qqp"],
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
     trainer_callbacks=[
         TrackEvalMetrics(),
         RezeroWeightsCallback()]
@@ -309,7 +309,7 @@ hp_search_finetuning_small_bert_trifecta_85_100k_qqp = deepcopy(
 )
 hp_search_finetuning_small_bert_trifecta_85_100k_qqp.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_90_100k_qqp = deepcopy(
@@ -317,35 +317,35 @@ hp_search_finetuning_small_bert_trifecta_90_100k_qqp = deepcopy(
 )
 hp_search_finetuning_small_bert_trifecta_90_100k_qqp.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_2x_100k_qqp = deepcopy(
     hp_search_finetuning_small_bert_trifecta_100k_qqp)
 hp_search_finetuning_small_bert_trifecta_2x_100k_qqp.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_4x_100k_qqp = deepcopy(
     hp_search_finetuning_small_bert_trifecta_100k_qqp)
 hp_search_finetuning_small_bert_trifecta_4x_100k_qqp.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_100k_big_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_big_tasks)
 hp_search_finetuning_small_bert_trifecta_100k_big_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_80%_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_85_100k_big_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_big_tasks)
 hp_search_finetuning_small_bert_trifecta_85_100k_big_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_85%_trifecta_100k",  # noqa: E501
 )
 
 
@@ -353,21 +353,21 @@ hp_search_finetuning_small_bert_trifecta_90_100k_big_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_big_tasks)
 hp_search_finetuning_small_bert_trifecta_90_100k_big_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_90%_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_2x_100k_big_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_big_tasks)
 hp_search_finetuning_small_bert_trifecta_2x_100k_big_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_2x_trifecta_100k",  # noqa: E501
 )
 
 hp_search_finetuning_small_bert_trifecta_4x_100k_big_tasks = deepcopy(
     hp_search_finetuning_small_bert_100k_big_tasks)
 hp_search_finetuning_small_bert_trifecta_4x_100k_big_tasks.update(
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_4x_trifecta_100k",  # noqa: E501
 )
 
 
@@ -413,13 +413,13 @@ hp_search_finetuning_trifecta_85_100k_small_tasks.update(
 hp_search_finetuning_trifecta_80_100k_small_tasks = deepcopy(
     hp_search_finetuning_trifecta_85_100k_small_tasks)
 hp_search_finetuning_trifecta_80_100k_small_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k"  # noqa
 )
 
 hp_search_finetuning_trifecta_90_100k_small_tasks = deepcopy(
     hp_search_finetuning_trifecta_85_100k_small_tasks)
 hp_search_finetuning_trifecta_90_100k_small_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa
 )
 
 hp_search_finetuning_bert_100k_small_tasks = deepcopy(
@@ -427,14 +427,14 @@ hp_search_finetuning_bert_100k_small_tasks = deepcopy(
 )
 hp_search_finetuning_bert_100k_small_tasks.update(
     model_type="bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_100k",  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa
     trainer_callbacks=[TrackEvalMetrics()],
 )
 
 hp_search_finetuning_trifecta_2x_small_tasks = deepcopy(
     hp_search_finetuning_trifecta_80_100k_small_tasks)
 hp_search_finetuning_trifecta_2x_small_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k"  # noqa
 )
 
 # ---------
@@ -486,33 +486,33 @@ hp_search_finetuning_bert_100k_big_tasks = deepcopy(
 )
 hp_search_finetuning_bert_100k_big_tasks.update(
     model_type="bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_100k",  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa
     trainer_callbacks=[TrackEvalMetrics()],
 )
 
 hp_search_finetuning_trifecta_80_100k_big_tasks = deepcopy(
     hp_search_finetuning_trifecta_85_100k_big_tasks)
 hp_search_finetuning_trifecta_80_100k_big_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k"  # noqa
 )
 
 hp_search_finetuning_trifecta_85_100k_big_tasks = deepcopy(
     hp_search_finetuning_trifecta_85_100k_big_tasks)
 hp_search_finetuning_trifecta_85_100k_big_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_8%_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_8%_trifecta_100k"  # noqa
 )
 
 hp_search_finetuning_trifecta_90_100k_big_tasks = deepcopy(
     hp_search_finetuning_trifecta_85_100k_big_tasks)
 hp_search_finetuning_trifecta_90_100k_big_tasks.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_90%_trifecta_100k"  # noqa
 )
 
 # The 2x model is going to be too expensive to do hp search all big tasks
 hp_search_finetuning_trifecta_2x_qqp = deepcopy(
     hp_search_finetuning_trifecta_80_100k_big_tasks)
 hp_search_finetuning_trifecta_2x_qqp.update(
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_2x_trifecta_100k",  # noqa
     task_names=["qqp"],
     task_hyperparams=dict(
         qqp=dict(

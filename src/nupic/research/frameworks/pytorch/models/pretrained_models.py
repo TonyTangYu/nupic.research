@@ -27,7 +27,7 @@ to access pretrained weights by setting the environment variable TORCH_HOME.
 Preload the weights on head node when running for the first time.
 
 Example:
-export TORCH_HOME=/mnt/efs/results/torch
+export TORCH_HOME=/home/ytang/nupic.research/results/torch
 
 In Python console:
 from nupic.research.frameworks.pytorch.models import <model name>

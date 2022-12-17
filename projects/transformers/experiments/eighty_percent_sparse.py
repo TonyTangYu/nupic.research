@@ -69,7 +69,7 @@ finetuning_tiny_bert_trifecta_sparse_embeddings_100k = deepcopy(finetuning_bert7
 finetuning_tiny_bert_trifecta_sparse_embeddings_100k.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/mnt/efs/results/pretrained-models/transformers-local/tiny_bert_trifecta_sparse_embeddings_100k",  # noqa: E501
+    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/tiny_bert_trifecta_sparse_embeddings_100k",  # noqa: E501
 )
 finetuning_tiny_bert_trifecta_sparse_embeddings_100k["config_kwargs"] = dict(
     sparsify_all_embeddings=True,

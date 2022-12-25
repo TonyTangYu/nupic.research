@@ -45,7 +45,7 @@ def _inject_trainer_mixin(config, mixin):
 # Deepspeed stage 2 default arguments. Args marked with "auto" will be replaced
 # with huggingface's values.
 DEEPSPEED_STAGE2_ARGS = {
-    "tokenized_data_cache_dir": "/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
+    "tokenized_data_cache_dir": "/home/tangyu/nupic.research/huggingface/preprocessed-datasets/text",
     "deepspeed": {
         "steps_per_print": 100,
         # "wall_clock_breakdown": True,

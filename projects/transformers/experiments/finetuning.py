@@ -119,7 +119,7 @@ debug_finetuning_bert_sparse_80_trifecta_cola.update(
     task_names=["cola"],
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_trifecta_100k",  # noqa: E501
     # Training arguments
     evaluation_strategy="steps",
     eval_steps=50,
@@ -152,7 +152,7 @@ debug_finetuning_bert100k.update(
     overwrite_output_dir=True,
 
     # Model from checkpoint
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
 
     # logging
     run_name="debug_finetuning_bert100k",
@@ -174,7 +174,7 @@ finetuning_bert700k_glue.update(
 
     # Model arguments
     finetuning=True,
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_700k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_700k",  # noqa: E501
     do_train=True,
     do_eval=True,
     do_predict=False,
@@ -209,7 +209,7 @@ finetuning_bert100k_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_bert100k_glue.update(
     # logging
     overwrite_output_dir=True,
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_100k",  # noqa: E501
 )
 
 
@@ -275,14 +275,14 @@ finetuning_bert_100k_glue_get_info.update(
 
 finetuning_bert1mi_glue_get_info = deepcopy(finetuning_bert_100k_glue_get_info)
 finetuning_bert1mi_glue_get_info.update(
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
 )
 
 finetuning_bert1mi_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_bert1mi_glue.update(
     # logging
     overwrite_output_dir=True,
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
 )
 
 # ---------
@@ -293,7 +293,7 @@ finetuning_sparse_bert_100k_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_sparse_bert_100k_glue.update(
     # Model arguments
     model_type="static_sparse_non_attention_bert",
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/static_sparse_non_attention_bert_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/static_sparse_non_attention_bert_100k",  # noqa: E501
 )
 
 
@@ -301,7 +301,7 @@ finetuning_sparse_encoder_bert_100k_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_sparse_encoder_bert_100k_glue.update(
     # Model arguments
     model_type="static_sparse_encoder_bert",
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/static_sparse_encoder_bert_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/static_sparse_encoder_bert_100k",  # noqa: E501
 )
 
 
@@ -309,7 +309,7 @@ finetuning_fully_sparse_bert_100k_glue = deepcopy(finetuning_bert700k_glue)
 finetuning_fully_sparse_bert_100k_glue.update(
     # Model arguments
     model_type="fully_static_sparse_bert",
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_sparse_80%_100k",  # noqa: E501
 )
 
 # ---------
@@ -336,7 +336,7 @@ finetuning_bert1mi_small_tasks.update(
     task_name=None,
     task_names=["rte", "wnli", "stsb", "mrpc", "cola"],
     overwrite_output_dir=True,
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
 )
 
 # ---------
@@ -347,7 +347,7 @@ finetuning_small_bert_large_dataset_100k_glue = deepcopy(
     finetuning_bert_100k_glue_get_info)
 finetuning_small_bert_large_dataset_100k_glue.update(
     # Model arguments
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
     trainer_callbacks=[TrackEvalMetrics()],
     rm_checkpoints=True,
 )

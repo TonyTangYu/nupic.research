@@ -59,7 +59,7 @@ class GMPTrainer(GradualMagnitudePruningMixin,
 
 
 # Pretrained models to prune via GMP.
-base_dir = "/home/ytang/nupic.research/results/pretrained-models/transformers-local/"
+base_dir = "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/"
 tiny_bert_100k_pretrained = base_dir + "tiny_bert_100k_prunable"
 tiny_bert_kd_onecycle_100k_pretrained = base_dir + "tiny_bert_onecycle_lr_kd_100k_prunable"  # noqa: E501
 
@@ -120,7 +120,7 @@ tiny_bert_pretrained_gmp_lr_range_test.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
     overwrite_output_dir=True,
@@ -152,7 +152,7 @@ tiny_bert_pretrained_gmp_52k.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
 )
@@ -201,7 +201,7 @@ tiny_bert_gmp_100k.update(
 
         # KD
         teacher_model_names_or_paths=[
-            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
 )
@@ -228,7 +228,7 @@ tiny_bert_gmp_100k_maxlr_05["trainer_mixin_args"].update(
 # ---------
 
 
-bert_1mi_pretrained = "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi_prunable"  # noqa E501
+bert_1mi_pretrained = "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi_prunable"  # noqa E501
 
 
 # The max_lr for this run is chosen based off this lr-range test
@@ -243,7 +243,7 @@ bert_1mi_pretrained_gmp_52k.update(
     max_steps=2000 + 30000 + 20000,  # longer may be better
     model_type="fully_static_sparse_bert",
     model_name_or_path=bert_1mi_pretrained,
-    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/tangyu/nupic.research/huggingface/preprocessed-datasets/text",
     overwrite_output_dir=True,
     trainer_callbacks=[
         RezeroWeightsCallback(),
@@ -261,7 +261,7 @@ bert_1mi_pretrained_gmp_52k.update(
         verbose_gmp_logging=True,
         # KD
         teacher_model_names_or_paths=[
-            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
+            "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi",
         ],
     ),
 )

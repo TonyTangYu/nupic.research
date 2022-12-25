@@ -102,6 +102,9 @@ from utils_qa import (
     postprocess_qa_predictions_with_beam_search,
 )
 
+import os
+os.environ["NCCL_DEBUG"] = "INFO"
+
 MODEL_CONFIG_CLASSES = list(MODEL_FOR_MASKED_LM_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
 
@@ -123,6 +126,8 @@ def main():
                             help="Available experiments")
     cmd_parser.add_argument("--local_rank", default=None,
                             help="added by torch.distributed.launch")
+    cmd_parser.add_argument("--ckpt", default=None, # "/home/tangyu/models/BertSparse90"
+                            help="load ckpt")
 
     cmd_args = cmd_parser.parse_args()
 
@@ -171,6 +176,22 @@ def main():
                     "avoid this behavior, change the `--output_dir` or add "
                     "`--overwrite_output_dir` to train from scratch."
                 )
+        
+        if cmd_args.ckpt is not None:
+            last_checkpoint = get_last_checkpoint(cmd_args.ckpt)
+            logging.warning(f"Loading from checkpoint: {last_checkpoint} ")
+            # if (last_checkpoint is None
+            #    and len(os.listdir(cmd_args.ckpt)) > 0):
+            #     raise ValueError(
+            #         f"Output directory ({training_args.output_dir}) already exists and "
+            #         "is not empty. Use --overwrite_output_dir to overcome."
+            #     )
+            # elif last_checkpoint is not None:
+            #     logging.info(
+            #         f"Checkpoint detected, resuming training at {last_checkpoint}. To "
+            #         "avoid this behavior, change the `--output_dir` or add "
+            #         "`--overwrite_output_dir` to train from scratch."
+            #     )
 
         # Setup logging
         logging.basicConfig(

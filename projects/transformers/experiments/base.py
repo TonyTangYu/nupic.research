@@ -29,9 +29,9 @@ from copy import deepcopy
 transformers_base = dict(
 
     # Model arguments
-    cache_dir="/home/ytang/nupic.research/results/pretrained-models/huggingface",
-    # tokenized_data_cache_dir="/home/ytang/nupic.research/results/preprocessed-datasets/text",
-    tokenized_data_cache_dir="/home/ytang/nupic.research/huggingface/preprocessed-datasets/text",  # noqa: E501
+    cache_dir="/home/tangyu/nupic.research/results/pretrained-models/huggingface",
+    # tokenized_data_cache_dir="/home/tangyu/nupic.research/results/preprocessed-datasets/text",
+    tokenized_data_cache_dir="/home/tangyu/nupic.research/huggingface/preprocessed-datasets/text",  # noqa: E501
     reuse_tokenized_data=True,
     save_tokenized_data=True,
     use_fast_tokenizer=True,

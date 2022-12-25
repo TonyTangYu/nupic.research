@@ -39,7 +39,7 @@ from nupic.torch.modules import SparseWeights
 
 # Import new class to override embedding related functions. # noqa
 # This class was implicitly defined through register_bert_model # noqa
-from . import FullyStaticSparseBertForMaskedLM  # noqa
+# from . import FullyStaticSparseBertForMaskedLM  # noqa
 from .register_bert_model import register_bert_model
 from .sparse_embedding import SparseEmbeddings
 
@@ -269,6 +269,6 @@ def _get_resized_sparse_embeddings(self, old_embeddings, new_num_tokens=None):
     return new_embeddings
 
 
-FullyStaticSparseBertForMaskedLM._get_resized_embeddings = (
-    _get_resized_sparse_embeddings
-)
+# FullyStaticSparseBertForMaskedLM._get_resized_embeddings = (
+#     _get_resized_sparse_embeddings
+# )

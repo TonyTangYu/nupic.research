@@ -136,7 +136,7 @@ trifecta_2x_hp_guess_follow_up.update(
 
 small_bert_big_dataset_hp_chase = deepcopy(finetuning_bert_100k_glue_get_info)
 small_bert_big_dataset_hp_chase.update(
-    model_name_or_path="/home/ytang/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
+    model_name_or_path="/home/tangyu/nupic.research/results/pretrained-models/transformers-local/small_bert_large_dataset_100k",  # noqa: E501
 )
 small_bert_big_dataset_hp_chase = update_task_hyperparams(
     small_bert_big_dataset_hp_chase, "small_100k")

@@ -140,7 +140,7 @@ if __name__ == "__main__":
 
     # load a teacher model - bert base
     model_name_or_path = (
-        "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
+        "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
     )
     teacher_config = AutoConfig.from_pretrained(
         model_name_or_path, revision="main", use_auth_token=False, local_files_only=True

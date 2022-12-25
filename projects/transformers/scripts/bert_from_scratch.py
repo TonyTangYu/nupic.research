@@ -25,7 +25,7 @@ plus other sources
 Libraries required are `transformers` and `datasets`, both can be installed with pip
 
 To reuse cached datasets, set the following environment variable prior to running:
-HF_HOME=/home/ytang/nupic.research/results/cache/huggingface
+HF_HOME=/home/tangyu/nupic.research/results/cache/huggingface
 """
 
 import argparse

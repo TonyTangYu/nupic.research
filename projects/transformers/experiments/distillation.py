@@ -56,7 +56,7 @@ debug_bert_kd.update(
     trainer_mixin_args=dict(
         # kd_ensemble_weights=None,
         teacher_model_names_or_paths=["bert-large-cased"],
-        teacher_model_cache_dir="/home/ytang/nupic.research/results/pretrained-models/huggingface",
+        teacher_model_cache_dir="/home/tangyu/nupic.research/results/pretrained-models/huggingface",
         kd_factor_init=1.0,
         kd_factor_end=1.0,
         kd_temperature_init=1.0,
@@ -97,7 +97,7 @@ tiny_bert_100k_kd.update(
             # "prajjwal1/bert-tiny",
             # "roberta-large"
         ],
-        teacher_model_cache_dir="/home/ytang/nupic.research/results/pretrained-models/huggingface",
+        teacher_model_cache_dir="/home/tangyu/nupic.research/results/pretrained-models/huggingface",
         kd_factor_init=1.0,
         kd_factor_end=1.0,
         kd_temperature_init=1.0,
@@ -128,7 +128,7 @@ tiny_bert_50k_kd.update(
 
     trainer_mixin_args=dict(
         teacher_model_names_or_paths=[
-            "/home/ytang/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
+            "/home/tangyu/nupic.research/results/pretrained-models/transformers-local/bert_1mi"
         ],
         kd_factor_init=1.0,
         kd_factor_end=1.0,

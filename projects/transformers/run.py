@@ -64,6 +64,7 @@ from integrations import (  # noqa I001
     init_ray_wandb_logger_callback,
 )
 from run_args import CustomTrainingArguments, DataTrainingArguments, ModelArguments
+from nupic.research.frameworks.pytorch.model_utils import count_nonzero_params, calc_model_sparsity
 from run_utils import (
     TaskResults,
     check_best_metric,
@@ -118,6 +119,8 @@ def pdict(dictionary):
     """Pretty print dictionary."""
     return pformat(dictionary, indent=4)
 
+ckpt_model = None
+ckpt_model_path = None
 
 def main():
 
@@ -178,8 +181,13 @@ def main():
                 )
         
         if cmd_args.ckpt is not None:
-            last_checkpoint = get_last_checkpoint(cmd_args.ckpt)
-            logging.warning(f"Loading from checkpoint: {last_checkpoint} ")
+            global ckpt_model
+            global ckpt_model_path
+            ckpt_model_path = cmd_args.ckpt
+            print("[I] ckpt_model_path: ", ckpt_model_path)
+            # ckpt_model.load_state_dict(torch.load(cmd_args.ckpt))
+            # logging.warning(f"Loading from checkpoint model: {ckpt_model} ")
+            # ckpt_sparsity = calc_model_sparsity(ckpt_model)
             # if (last_checkpoint is None
             #    and len(os.listdir(cmd_args.ckpt)) > 0):
             #     raise ValueError(
@@ -254,6 +262,13 @@ def run_pretraining(
 
     config = init_config(model_args)
     tokenizer = init_tokenizer(model_args)
+
+    if ckpt_model_path is not None:
+        print("[I] Loading checkpoint to calculate sparsity ...")
+        ckpt_model = init_model(model_args, config, tokenizer)
+        ckpt_model.load_state_dict(torch.load(ckpt_model_path))
+        ckpt_sparsity = calc_model_sparsity(ckpt_model)
+        print("[I] sparsity is ", ckpt_sparsity)
 
     if tokenized_datasets is None:
         # Tokenizing and preprocessing the datasets for language modeling
